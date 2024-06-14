@@ -399,7 +399,7 @@ main #sidebar{
   align-items: center;
   position: sticky;
   justify-content: top;
-  gap: 30px;
+  gap: 20px;
   flex-flow: nowrap column;
   padding-top: 30px;
 }
@@ -413,10 +413,11 @@ main #sidebar{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 12px 20px;
   border-radius: 6px;
   transition: 0.3s;
+  background-color: #ececec;
 }
 .previous-Chats:hover{
-  background-color: #ececec;
+  background-color: #acacac;
 }
