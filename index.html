@@ -62,12 +62,20 @@
                 </div>
             </article>
 
-            <div id="conversation-div" :style="{'top': '-' + conversation_length + 'px'}">
-            <div v-for="message in messages" class="message" :style="[message.role === 'user' ? { 'margin-left': conversation_bar_width + 'px' } : { 'margin-left': '-' + conversation_bar_width + 'px' }]">
-                <p>{{message.role}}:</p>
-                <p>{{message.content}}</p>
+            <div id="conversation-div">
+                <div v-for="message in messages" class="message" :style="[message.role === 'user' ? { 'margin-left': conversation_bar_width + 'px' } : { 'margin-left': '-' + conversation_bar_width + 'px' }]">
+                    <p>{{message.role}}:</p>
+                    <p>{{message.content}}</p>
+                </div>
+
+                <div id="input-form">
+                    <input id="message-input" type="text" v-model="message_input" placeholder="Type message here">
+                    <button @click="submit_message()">Submit</button>
+                </div>
             </div>
-        </di>
+
+           
+
         </main>
         
 
