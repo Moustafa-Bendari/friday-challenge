@@ -2,17 +2,19 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 nav{
-    height: 8vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-inline: 20px;
+    position: relative;
 }
 nav img{
-    animation: rotate 2s linear infinite;
+    animation: rotate 5s linear infinite;
     }
 
 @keyframes rotate {
@@ -26,7 +28,7 @@ nav img{
 ul{
     position: absolute;
     left: 50%;
-    top: 10%;
+    top: 50%;
     transform: translate(-50%, -50%);;
 }
 
@@ -40,5 +42,15 @@ nav a{
     text-decoration: none;
     color: black;
     font-weight: 500;
+    font-size: 18px;
+    transition: 0.5s;
 }
-
+nav ul li{
+    transition: 0.5s;
+}
+nav ul li:hover{
+    transform: scale(1.1);
+}
+nav ul li:hover a{
+    color: darkblue;
+}
