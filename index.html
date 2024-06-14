@@ -67,7 +67,15 @@
                     <p>{{message.role}}:</p>
                     <p>{{message.content}}</p>
                 </div>
+
+                <div id="input-form">
+                    <input id="message-input" type="text" v-model="message_input" placeholder="Type message here">
+                    <button @click="submit_message()">Submit</button>
+                </div>
             </div>
+
+           
+
         </main>
         
 

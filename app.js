@@ -4,6 +4,7 @@ Vue.createApp({
         preloader:true,
         conversation_bar_width: 200,
         conversations: ["test","test 2","test","test 2","test","test 2","test","test 2"],
+        message_input: "",
         messages: [
           {
           "role": "system",
@@ -17,7 +18,9 @@ Vue.createApp({
       };
     },
     methods: {
-
+      submit_message: function () {
+        console.log(this.message_input);
+      },
     },
     mounted(){
         setTimeout(() => {
