@@ -391,6 +391,26 @@ main{
     border-radius: 10px;
 }
 
+#message-input {
+  border-radius: 10px;
+  width: 240px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#submit-button {
+  border-radius: 10px;
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  border: 1px solid black;
+  transition: 0.3s;
+  background-color: #ececec;
+  &:hover {
+    background-color: #acacac;
+  }
+}
+
 main #sidebar{
   height: 100vh;
   width: 20vw;
