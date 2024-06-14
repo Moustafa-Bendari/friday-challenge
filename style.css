@@ -81,7 +81,7 @@ nav ul li:hover a{
   }
   
   .preload > * {
-    transition: var(--transition-1);
+    transition: var(--transition-3);
   }
   .preload.loaded > * { opacity: 0;}
   
