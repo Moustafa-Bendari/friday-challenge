@@ -3,6 +3,7 @@ Vue.createApp({
       return {
         preloader:true,
         conversation_bar_width: 200,
+        conversation_length: 0,
         messages: [
           {
           "role": "system",
