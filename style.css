@@ -368,6 +368,7 @@ main{
 }
 
 #conversation-div {
+  padding-top: 30px;
     margin: 0px 0px 0px 50px;
     display: flex;
     flex-direction: column;
@@ -386,7 +387,7 @@ main{
 .message {
     background-color: grey;
     width: 240px;
-
+    padding: 5px;
     border-radius: 10px;
 }
 
@@ -406,4 +407,16 @@ main #sidebar{
 #sidebar h2{
   font-size: 20px;
   font-weight: 400;
+}
+.previous-Chats{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.previous-Chats:hover{
+  background-color: #ececec;
 }

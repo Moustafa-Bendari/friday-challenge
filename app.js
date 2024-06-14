@@ -4,7 +4,7 @@ Vue.createApp({
         preloader:true,
         conversation_bar_width: 200,
         conversation_length: 0,
-        conv:"helllllo",
+        conversations: ["test","test 2","test","test 2","test","test 2","test","test 2"],
         messages: [
           {
           "role": "system",
@@ -18,7 +18,7 @@ Vue.createApp({
       };
     },
     methods: {
-        
+
     },
     mounted(){
         setTimeout(() => {
