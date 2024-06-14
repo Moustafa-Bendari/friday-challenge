@@ -53,7 +53,7 @@
             </nav>
         </header>
 
-        <div id="conversation-div">
+        <div id="conversation-div" :style="{'top': '-' + conversation_length + 'px'}">
             <div v-for="message in messages" class="message" :style="[message.role === 'user' ? { 'margin-left': conversation_bar_width + 'px' } : { 'margin-left': '-' + conversation_bar_width + 'px' }]">
                 <p>{{message.role}}:</p>
                 <p>{{message.content}}</p>
