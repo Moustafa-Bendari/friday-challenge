@@ -42,3 +42,20 @@ nav a{
     font-weight: 500;
 }
 
+#conversation-div {
+    margin: 50px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.message {
+    background-color: grey;
+    width: 240px;
+
+    border-radius: 10px;
+}
+
