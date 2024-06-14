@@ -28,6 +28,11 @@
             </nav>
         </header>
 
+        <div id="conversation-div">
+            <div v-for="message in messages" class="message">
+                <p>{{message.content}}</p>
+            </div>
+        </div>
 
 
     </div>
