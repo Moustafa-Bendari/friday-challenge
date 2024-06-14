@@ -4,6 +4,7 @@ Vue.createApp({
         preloader:true,
         conversation_bar_width: 200,
         conversation_length: 0,
+        conv:"helllllo",
         messages: [
           {
           "role": "system",
