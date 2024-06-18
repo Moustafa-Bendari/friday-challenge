@@ -3,23 +3,44 @@ Vue.createApp({
       return {
         preloader:true,
         conversation_bar_width: 200,
-        conversations: ["test","test 2","test","test 2","test","test 2","test","test 2"],
+        conversations: [],
+        currentConversation: 0,
         message_input: "",
         messages: [
-          {
-          "role": "system",
-          "content": "You are a helpful assistant."
-        },
-        {
-          "role": "user",
-          "content": "testing user message."
-        },
+
         ],
       };
     },
     methods: {
-      submit_message: function () {
-        console.log(this.message_input);
+      submitMessage: async function ()  {
+        let message = this.message_input;
+        this.messages.push({
+          role: 'user',
+          content: message
+        });
+        this.message_input = "";
+        let conversation = this.conversations[this.currentConversation];
+        let data = await this.getResponse(message, conversation);
+        this.messages.push(data);
+        console.log(data);
+      },
+
+      getResponse: async function (message, conversation) {
+        args = {
+          method: 'POST',
+          body: JSON.stringify({
+            message: message,
+            conversation: conversation,
+        })
+        }
+        let response = await fetch("https://ai-project-code-school-a451e8b65bef.herokuapp.com/", args);
+        let data = await response.json();
+        return data;
+      },
+
+      newConversation: async function () {
+        this.conversations.push("");
+        this.currentConversation = (this.conversations[this.conversations.length-1]);
       },
     },
     mounted(){
